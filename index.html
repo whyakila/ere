@@ -31,7 +31,7 @@
     position: absolute;
     font-size: 5vw; /* Responsive */
     color:gold;
-    animation: floatDownAlt 12s ease-in-out infinite;
+    animation: floatupAlt 12s ease-in-out infinite;
     pointer-events: none;
     opacity: 0;
   }
@@ -142,26 +142,26 @@ h3{
     animation: floatUpAlt 14s ease-in-out infinite;
   }
 
-@keyframes floatDownAlt {
-  0% {
-    transform: translate(0, -100vh) scale(1.5) rotate(15deg);
-    opacity: 0;
+ @keyframes floatUpAlt {
+    0% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      transform: translate(20px, -50vh) scale(1.2) rotate(-15deg);
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-20px, -100vh) scale(1.5) rotate(15deg);
+      opacity: 0;
+    }
   }
-  10% {
-    opacity: 1;
-  }
-  50% {
-    transform: translate(-20px, -50vh) scale(1.2) rotate(-15deg);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(20px, 0) scale(1) rotate(0deg);
-    opacity: 0;
-  }
-}
 
 
   @media (max-width: 600px) {
