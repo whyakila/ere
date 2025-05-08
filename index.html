@@ -5,7 +5,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Music Notes Animation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +16,11 @@
   padding: 0;
   overflow: hidden;
   background: linear-gradient(135deg, #000000, #111111, #222222, #FFD700);
-  background-size:cover;
-  animation: gradientShift 20s ease infinite;
-  background-image:url(/IMG_6704_wallpaper_15promax_2.jpg);
+  animation: gradientShift 10s ease infinite;
+  background-image:url(/freepik__golden-sea-waves-under-a-full-moon-music-notes-flo__78958.png);
+  background-size: cover;
+
+ 
 }
 
 
@@ -33,27 +35,30 @@
     .noot {
     position: absolute;
     font-size: 5vw; /* Responsive */
-    color:gold;
-    animation: floatupAlt 12s ease-in-out infinite;
+    color: rgba(255, 217, 0, 0.701);
+    animation: floatUp 12s ease-in-out infinite;
     pointer-events: none;
     opacity: 0;
   }
   .timer {
-  padding: 30px 30px;
-  margin: 20px 20px;
+  padding: 30px;
+  margin: 20px;
   border-radius: 40px;
-  font-size: 8vw; /* Responsive font size */
+  font-size: 9vw;
   color: #000000;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  background: linear-gradient(135deg, #FFD700, #FFC300, #FFB700, #FFD700);
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
- 
+
+  /* New: blurred background effect */
+  background: rgba(98, 175, 196, 0.2); /* semi-transparent background */
+  backdrop-filter: blur(10px); /* blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+
+  /* Optional: soft inner shadow for contrast */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .title-container {
   text-align: center;
   margin-top: 20px;
@@ -61,7 +66,7 @@
 
 .animated-title {
   color: gold;
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: bold;
@@ -76,12 +81,15 @@
     font-weight: 400;
     font-style: bold;
     opacity: 0;
-   transform: translateY(20px);
-   animation: fadeSlideUp 2s ease-out forwards;
-   border-style: solid wheat;
-  font-family: "Style Script", cursive;
+    transform: translateY(20px);
+    animation: fadeSlideUp 2s ease-out forwards;
+    border-style: solid wheat;
+
+    
+    
+    
 }
-h2{
+ h2{
     text-align: center;
     font-size: 25px;
     color: silver;
@@ -91,23 +99,33 @@ h2{
     margin: 5px;
     padding: 5px;
 }
-h3{
+ h3{
     
     text-align: center;
-    font-family: sans-serif;
+    font-family: "Style Script", cursive;
     font-size: 50px;
-    background-color: gold;
-    border-style: solid;
-    border-radius: 30px;
-    color: #000000;
+    color: rgb(0, 0, 0);
    
 }
-    .logo-container {
+button{
+  justify-content: center;
+  text-align: center;
+    font-family: sans-serif;
+    font-size: 25px;
+    background-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 30px;
+    margin: 5px;
+    color: gold;
+}
+.logo-container {
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 20px 20px 20px 20px;
+      
 
+      
     }
 /* Animation */
 @keyframes fadeSlideUp {
@@ -153,7 +171,7 @@ h3{
     animation: floatUpAlt 14s ease-in-out infinite;
   }
 
- @keyframes floatUpAlt {
+  @keyframes floatUpAlt {
     0% {
       transform: translate(0, 0) scale(1) rotate(0deg);
       opacity: 0;
@@ -174,7 +192,6 @@ h3{
     }
   }
 
-
   @media (max-width: 600px) {
     .noot {
       font-size: 8vw; /* Bigger notes on mobile */
@@ -185,17 +202,21 @@ h3{
 
 </head>
 <body>
-   <audio id="backgroundMusic" src="" autoplay loop></audio>
-         <div class="logo-container">
-        <img src="ere-un-2.png" class="center-img" alt="ERE Logo"  style="width: 350px;"/>
-      </div> 
+      <!-- AUDIO SECTION -->
+ 
+  
+  <div class="logo-container">
+    <img src="ere-un-2.png" class="center-img" alt="ERE Logo"  style="width: 350px;"/>
+  </div>
+
+
     <div class="title-container">
-        <!--<h1 class="animated-title">ERE UNPLUGGED 2K25</h1>-->
+       <!--<h1 class="animated-title">ERE UNPLUGGED 2K25</h1>-->
         <h1 class="animated-title-2">COMING SOON</h1>
       </div>
-  
+
     <div class="timer">
-               <div id="countdown" style="display:flex; gap: 20px; font-family: Arial, sans-serif; text-align: center; justify-content: center; ">
+        <div id="countdown" style="display:flex; gap: 20px; font-family: Arial, sans-serif; text-align: center; justify-content: center;">
             <div>
               <div id="days" >0</div>
               <div style=" font-size: 20px;">Days</div>
@@ -213,15 +234,16 @@ h3{
               <div style=" font-size: 20px;">Seconds</div>
             </div>
           </div>
+
+          <h3>15 MAY</h3>
+<h2 style="    text-align: center;font-size: 20px;color: silver;background-color: rgb(0, 0, 0);border-radius: 40px;border-style: solid ;margin: 5px;padding: 5px;">@ Rubert Peiris Building</h2>
+
    </div>
 
 
 
   
 
-
-   
-   
   <div class="muzieknootjes">
    
 <div class="noot" style="top:45%; left:5%; animation-delay: 0s;">&#119071;</div>
@@ -245,8 +267,9 @@ h3{
 <div class="noot" style="top:58%; left:90%; animation-delay: 3.4s;">&#9835;</div>
 <div class="noot" style="top:63%; left:95%; animation-delay: 3.6s;">&#9838;</div>
 <div class="noot" style="top:68%; left:3%; animation-delay: 3.8s;">&#9839;</div>
-<h3>15 MAY</h3>
-<h2>@ Rubert Peiris Auditorium</h2>
+
+
+
 <div class="noot" style="top:73%; left:8%; animation-delay: 4s;">&#9833;</div>
 <div class="noot" style="top:78%; left:13%; animation-delay: 4.2s;">&#9834;</div>
 <div class="noot" style="top:83%; left:18%; animation-delay: 4.4s;">&#9835;</div>
@@ -268,9 +291,8 @@ h3{
 
   </div>
 
-  
-
-
+  <!-- MUTE / UNMUTE BUTTON -->
+ 
 
 
     
@@ -280,7 +302,7 @@ h3{
 
   <script>
 
-   var countdownDate = new Date("May 15, 2025 18:30:00").getTime();
+var countdownDate = new Date("May 14, 2025 00:00:00").getTime();
 
 var x = setInterval(function() {
     var now = new Date().getTime();
@@ -301,6 +323,20 @@ var x = setInterval(function() {
         document.getElementById("countdown").innerHTML = "<div>Event Started!</div>";
     }
 }, 1000);
+
+    // AUDIO MUTE/UNMUTE FUNCTION
+    const music = document.getElementById('backgroundMusic');
+    const muteBtn = document.getElementById('muteBtn');
+
+    muteBtn.addEventListener('click', () => {
+      if (music.muted) {
+        music.muted = false;
+        muteBtn.innerText = "Mute";
+      } else {
+        music.muted = true;
+        muteBtn.innerText = "Unmute";
+      }
+    });
 </script>
 </body>
 </html>
